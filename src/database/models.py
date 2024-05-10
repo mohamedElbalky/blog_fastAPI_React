@@ -1,8 +1,8 @@
 
+
 from sqlalchemy import Column, Integer, String, DateTime
 
-from database.db_settings import Base
-
+from .db_settings import Base
 
 
 class DbPost(Base):

@@ -10,12 +10,13 @@ class PostBase(BaseModel):
     content: str
     creator: str
     
+
     
 class PostDisplay(PostBase):
-    id = int
+    id : int
     timestamp: datetime
     
     class Config():
-        orm_mode = True
+        from_attributes = True
         
 
