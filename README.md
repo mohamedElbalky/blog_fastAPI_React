@@ -10,6 +10,7 @@
   - create virtual environment [python version is 3.12]: `python -m venv env`
   - install requirements: `pip install src/requirements.txt`
   - start uvicorn server from src folder: `uvicorn main:app --relaod`
+  - download node modules: `npm install`
   - start react server from frontend folder: `npm start`
   - open API documentation from : `http://localhost:8000/docs`
   - open frontend from: `http://localhost:3000`
