@@ -41,3 +41,22 @@ def delete(id: int, db: Session):
     db.commit()
     
     return {"message": "Post deleted successfully"}
+
+
+# def read_one_post(id: int, db: Session):
+#     post_db = db.query(DbPost).filter(DbPost.id == id).first()
+#     if not post_db:
+#         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"Post with ({id}) not found")
+#     return post_db
+
+def update_image(id: int, db: Session, image_url: str):
+    """add an image to the post"""
+    post_db = db.query(DbPost).filter(DbPost.id == id).first()
+    if not post_db:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"Post with #id({id}) not found")
+    
+    post_db.image = image_url
+    db.commit()
+    # db.refresh(post_db)
+    
+    return True

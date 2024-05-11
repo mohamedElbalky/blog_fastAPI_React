@@ -1,0 +1,85 @@
+.post {
+    display: flex;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 70%;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    background-color: #f6f5f5;
+    border-radius: 10px;
+}
+
+.post_image {
+    display: block;
+    width: 30%;
+    object-fit: contain;
+    padding-right: 10px;
+    margin-bottom: auto;
+    border-radius: 10px 0 0 10px;
+}
+
+.post_info {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.post_info .post_title {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #444;
+    margin-top: 10px;
+}
+
+.post_info .post_content {
+    font-size: 15px;
+    color: #777;
+    line-height: 1.6;
+}
+
+.post_info .post_creator {
+    font-size: small;
+    font-style: italic;
+    color: #888;
+}
+
+.post_info .post_creator a {
+    text-decoration: none;
+}
+
+.post_info .post_content {
+    white-space: pre-line;   /* don't remove new line (\n) from text */
+}
+
+
+.post_info .post_timestamp {
+    color: #888;
+    font-size: 12px;
+}
+
+.post_info .post_delete {
+    width: fit-content;
+}
+
+.post_info .post_delete button {
+    padding: 10px;
+    background-color: rgba(187, 9, 9, 0.679);
+    border-radius: 5px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: 0.5s;
+}
+
+.post_info .post_delete button:hover {
+    letter-spacing: 0.5px;
+    background-color: transparent;
+    border: 1px solid rgba(187, 9, 9, 0.679);
+    color: rgba(187, 9, 9, 0.679);
+}

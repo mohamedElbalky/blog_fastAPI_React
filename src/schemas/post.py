@@ -5,13 +5,13 @@ from pydantic import BaseModel
 
 
 class PostBase(BaseModel):
-    image_url: str
     title: str
     content: str
     creator: str
+    image_url: str
     
 
-    
+
 class PostDisplay(PostBase):
     id : int
     timestamp: datetime
