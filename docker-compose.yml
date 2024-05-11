@@ -1,0 +1,29 @@
+version: '3.9'
+
+services:
+  backendserver: 
+    build: ./src
+    container_name: backend
+    command: uvicorn main:app --host 0.0.0.0 --port 8000
+    ports: 
+      - "8000:8000"
+    volumes:
+      - ./src:/app
+    networks:
+      - prj-net
+
+  frontendserver:
+    build: ./frontend
+    container_name: frontend
+    command: npm start
+    ports: 
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+    networks:
+      - prj-net
+    depends_on:
+      - backendserver
+
+networks:
+  prj-net:
