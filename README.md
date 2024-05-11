@@ -15,3 +15,7 @@
   - open frontend from: `http://localhost:3000`
   
 - Run project by using Docker:
+  - clone the repository
+  - run `docker-compose up --build`
+  - open API documentation from : `http://localhost:8000/docs`
+  - open frontend from: `http://localhost:3000`
